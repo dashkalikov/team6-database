@@ -1,0 +1,30 @@
+{
+  "format_version": 1,
+  "reel_count": 3,
+  "row_count": 3,
+  "symbols": ["CHERRY", "LEMON", "SEVEN"],
+  "reels": [
+    ["CHERRY", "LEMON", "CHERRY", "SEVEN", "LEMON", "CHERRY"],
+    ["LEMON", "CHERRY", "SEVEN", "CHERRY", "LEMON", "CHERRY"],
+    ["CHERRY", "SEVEN", "LEMON", "CHERRY", "CHERRY", "LEMON"]
+  ],
+  "paylines": [
+    {"id": "top", "rows": [0, 0, 0]},
+    {"id": "middle", "rows": [1, 1, 1]},
+    {"id": "bottom", "rows": [2, 2, 2]},
+    {"id": "diagonal_down", "rows": [0, 1, 2]},
+    {"id": "diagonal_up", "rows": [2, 1, 0]}
+  ],
+  "paytable": [
+    {"id": "three_cherries", "symbols": ["CHERRY", "CHERRY", "CHERRY"], "multiplier": {"numerator": 2, "denominator": 1}},
+    {"id": "three_lemons", "symbols": ["LEMON", "LEMON", "LEMON"], "multiplier": {"numerator": 3, "denominator": 1}},
+    {"id": "three_sevens", "symbols": ["SEVEN", "SEVEN", "SEVEN"], "multiplier": {"numerator": 10, "denominator": 1}}
+  ],
+  "payout": {
+    "bet_basis": "spin_total",
+    "includes_stake": true,
+    "rounding": "floor",
+    "aggregation": "sum_then_floor",
+    "line_match": "exact_three"
+  }
+}
